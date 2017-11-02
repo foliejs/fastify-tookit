@@ -1,0 +1,10 @@
+{
+  "name": "fastify-toolkit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "sunnode <m18205253820@163.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^0.31.0"
+  }
+}
