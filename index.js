@@ -1,6 +1,14 @@
-const fastify = require('fastify')()
+const split = require('split2')
+const stream = split(JSON.parse)
+const fastify = require('fastify')({
+  logger: {
+    level: 'info',
+    stream: stream
+  }
+})
 // api routes
-fastify.get('/', function (req, reply) {
+fastify.get('/', { logger: true }, (req, reply) => {
+  req.log.info({ loggerMiddleware: 'log here' })
   reply.send({ hello: 'world' })
 })
 
